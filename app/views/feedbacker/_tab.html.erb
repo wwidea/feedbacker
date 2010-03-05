@@ -1,0 +1,10 @@
+<div id="feedback">
+  <div id="compressed_feedback_form_tab">
+    <%= link_to_function image_tag('feedback_tab.png'), "$('expanded_feedback_form').show(); $('compressed_feedback_form_tab').hide();" %>
+  </div>
+  <div id="expanded_feedback_form" style="display:none">
+    <div id="expanded_feedback_form_tab"><%= link_to_function image_tag('feedback_tab.png'), "$('compressed_feedback_form_tab').show(); $('expanded_feedback_form').hide();" %></div>
+    <% @remark ||= Remark.new %>
+    <%= render :partial => 'remarks/form' %>
+  </div>
+</div>
