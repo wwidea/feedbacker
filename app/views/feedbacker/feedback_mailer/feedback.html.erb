@@ -1,0 +1,7 @@
+<p>Feedback Received</p>
+
+<p>From: <%= @remark.user_name %> [<%= @remark.user.email %>]</p>
+<p>Page: <%= link_to(@remark.source_url, @remark.source_url) %></p>
+
+<p>Comments:</p>
+<p><%= @remark.content %></p>
