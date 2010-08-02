@@ -6,7 +6,6 @@ module Feedbacker #:nodoc:
         include InstanceMethods
         
         belongs_to :user
-        #after_create :send_email
       end
     end
     
@@ -17,27 +16,13 @@ module Feedbacker #:nodoc:
     module InstanceMethods
       
       def user_name
-        if defined? USER_NAME_METHOD
-          return user.send(USER_NAME_METHOD)
+        if defined? Feedbacker::RemarkMethods::USER_NAME_METHOD
+          return user.send(Feedbacker::RemarkMethods::USER_NAME_METHOD)
         else
           user.name
         end
       end
       
-      #######
-      private
-      #######
-      
-#      def send_email
-#        AutoMailer.deliver_html_mail(
-#          :template => :feedback_notification,
-#          :recipient => 'support@wwidea.org',
-#          :sender => 'support@wwidea.org',
-#          :reply_to => self.user.email,
-#          :subject => "#{(defined? FEEDBACKER_EMAIL_PREFIX) ? FEEDBACKER_EMAIL_PREFIX : '[FEEDBACKER]'} Feedback Notification",
-#          :assigns => {:remark => self}
-#        )
-#      end
     end
   end
 end
