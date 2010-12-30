@@ -1,0 +1,96 @@
+/********************
+
+  FEEDBACKER DEFAULT STYLES
+  
+  OVERRIDE IN APPLICATION.CSS
+
+********************/
+
+#feedback input[value="Submit Feedback"] {
+  margin-top: -0.75em;
+}
+
+.feedback, .feedback a, .feedback a:hover {
+  background: #FFAC48;
+  color: #fff;
+  font-weight:bold;
+  padding: 0 3px;
+  border-bottom: 0;
+}
+
+#feedback { 
+  position: fixed;  
+  top: 55px; 
+  left:0;
+  z-index: 10; 
+/*  width: 440px;*/
+  } 
+
+#feedback div {
+  margin-top: 0;
+}   
+  
+#compressed_feedback_form_tab { 
+  float: left; 
+  height: 155px;
+}
+
+#expanded_feedback_form_tab img { 
+  position: absolute;
+  top: 0;
+  left: 430px;
+} 
+
+:first-child+html #expanded_feedback_form_tab img { 
+  position: absolute;
+  top: 0;
+  left: 436px;
+}
+
+#compressed_feedback_form_tab a { 
+  border-bottom: 0;
+}
+
+#expanded_feedback_form_tab a { 
+  border-bottom: 0;
+}
+
+#feedback label {
+  display:inline;
+  width: auto;
+  color: #fff;
+  margin-left: 1em;
+}
+  
+#remark_content { 
+  width: 400px;
+  height: 60px; 
+  padding: 0.5em;
+  margin-left: 1em;
+  font: 12px "Trebuchet MS", Verdana, Arial, sans-serif;
+  overflow-y: auto;
+}
+  
+#expanded_feedback_form {
+  background: url(../images/feedback_tab_bottom.png) top left repeat-x;
+  height: 155px;
+  padding: 0.25em;
+}
+
+.fb_cancel a {
+  margin-left: 0.5em;
+  color: #ffc;
+  border-bottom: 1px dotted #ffc;
+  font-weight:normal;
+}
+
+.fb_cancel a:hover {
+  border-bottom: 1px solid #ffc;
+}
+
+#feedback_thank_you_message {
+font-size: 14px;
+color: #D1FEA4;
+margin-left: 1em;
+font-weight:bold;
+}

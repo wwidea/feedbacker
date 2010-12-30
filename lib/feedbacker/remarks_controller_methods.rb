@@ -1,7 +1,7 @@
 module Feedbacker
   module RemarksControllerMethods
     def create 
-      @remark = current_user.remarks.new(params[:remark])
+      @remark = Remark.new(params[:remark].merge(:user_id => current_user.id))
       @remark.source_url = request.env['HTTP_REFERER']
       if @remark.save
         respond_to do |format|

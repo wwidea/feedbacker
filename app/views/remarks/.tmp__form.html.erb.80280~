@@ -1,4 +1,4 @@
-<%= form_for @remark, :remote => true do |f| %>
+<% remote_form_for @remark do |f| %>
   <label><%= render :partial => 'remarks/greeting' %></label>
   <div><%= f.text_area :content %></div>
   <div id='feedback_submit_button'><%= f.submit 'Submit Feedback' %> <span class="fb_cancel"><%= link_to_function 'Cancel', hide_feedback %></span></div>
