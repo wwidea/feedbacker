@@ -1,3 +1,5 @@
 class RemarkObserver < ActiveRecord::Observer
-  include Feedbacker::RemarkObserverMethods
+  def after_create(remark)
+    FeedbackMailer.feedback(remark).deliver
+  end
 end
