@@ -24,7 +24,13 @@
   left:0;
   z-index: 10; 
 /*  width: 440px;*/
-  } 
+}
+
+#feedback p {
+  margin:0;
+  padding:0;
+  color: #fff;
+}
 
 #feedback div {
   margin-top: 0;

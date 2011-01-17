@@ -1,5 +1,5 @@
 <%= form_for @remark, :remote => true do |f| %>
-  <label><%= render :partial => 'remarks/greeting' %></label>
+  <p><label><%= render :partial => 'remarks/greeting' %></label></p>
   <div><%= f.text_area :content %></div>
   <div id='feedback_submit_button'><%= f.submit 'Submit Feedback' %> <span class="fb_cancel"><%= link_to_function 'Cancel', hide_feedback %></span></div>
   <div id='feedback_thank_you_message' style='display:none'>Thank you for your feedback!</div>
