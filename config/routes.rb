@@ -1,3 +1,3 @@
-ActionController::Routing::Routes.draw do |map|
-    map.resources :remarks,             :only => [:create]
+Readaroute::Application.routes.draw do
+    resources :remarks,             :only => [:create]
 end
