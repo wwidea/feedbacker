@@ -1,3 +1,3 @@
-Readaroute::Application.routes.draw do
+Rails.application.routes.draw do
     resources :remarks,             :only => [:create]
 end
