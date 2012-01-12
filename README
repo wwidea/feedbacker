@@ -6,24 +6,19 @@ Feedbacker provides a tab for users to contact developers from within the applic
 
 Installation
 ============
-1. rake feedbacker:bootstrap
+1. Add the following to your Gemfile
+gem :feedbacker
 
-2. Add the following line to your application layout
+2. Run `bundle install`
+
+3. Add the following line to your application layout
 <%= javascript_include_tag :feedbacker %>
 
-3. Add the following line to your application layout before you call application.css. Override default settings in application.css
+4. Add the following line to your application layout before you call application.css. Override default settings in application.css
 <%= stylesheet_link_tag :feedbacker %>
 
-4. Add the following line right after the body tag in your application layout
+5. Add the following line right after the body tag in your application layout
 <%= render(:partial => 'feedbacker/tab') unless current_user.is_guest? %>
-
-5. Add to applicaton_controller.rb (may not be necessary after Rails 3.1)
-helper :feedbacker
-
-6. Add the folling like to confing/appliction.rb
-config.active_record.observers = :remark_observer
-
-5. Open config/initializers/feedbacker.rb and edit to taste
 
 
 Copyright (c) 2009 WWIDEA, Inc. released under the MIT license

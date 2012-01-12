@@ -1,3 +1,3 @@
-class RemarksController < ApplicationController
+class RemarksController < ::ApplicationController
   include Feedbacker::RemarksControllerMethods
 end
