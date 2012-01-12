@@ -20,5 +20,7 @@ gem :feedbacker
 5. Add the following line right after the body tag in your application layout
 <%= render(:partial => 'feedbacker/tab') unless current_user.is_guest? %>
 
+6. Add the folllowing line to config/application.rb
+config.paths['db/migrate'] = Feedbacker::Engine.paths['db/migrate'].existent
 
 Copyright (c) 2009 WWIDEA, Inc. released under the MIT license
