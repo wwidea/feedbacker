@@ -1,3 +1,3 @@
 module Feedbacker
-  VERSION = '0.1.1a1'
+  VERSION = '0.1.2'
 end
