@@ -7,9 +7,11 @@ Assumptions
 -----------
 
 Feedbacker assumes that you're using...
-* At least Rails 3.1.3
-* The Rails Asset Pipeline
-* Jquery
+
+*  At least Rails 3.1.3
+*  The Rails Asset Pipeline
+*  Jquery
+*  and probably some other things that we've failed to mention.
 
 Installation
 ------------
