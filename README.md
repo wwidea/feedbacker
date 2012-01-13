@@ -39,6 +39,15 @@ Installation
 
 7. Run `rake db:migrate` to add remarks table.
 
+8. Create feedbacker.rb in config/initializers and add the following line.
+
+    Feedbacker::EMAIL_TO = 'support@yourdomain.com'
+
+9. (Optional) You may also add either or both of the following lines and edit to taste. Defaults are shown.
+
+    Feedbacker::RemarkMethods::USER_NAME_METHOD = :first_last
+    Feedbacker::EMAIL_PREFIX = '[FEEDBACKER]'
+
 Copyright (c) 2009 WWIDEA, Inc. released under the MIT license
 
 

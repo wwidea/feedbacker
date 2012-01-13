@@ -1,2 +1,3 @@
 Feedbacker::RemarkMethods::USER_NAME_METHOD = :first_last
-FEEDBACKER_EMAIL_PREFIX = '[FEEDBACKER]'
+Feedbacker::EMAIL_PREFIX = '[FEEDBACKER]'
+Feedbacker::EMAIL_TO = 'support@wwidea.org'
