@@ -35,8 +35,8 @@ Installation
 
 6. Add the folllowing line to config/application.rb.
 
-    config.paths['db/migrate'] = Feedbacker::Engine.paths['db/migrate'].existent
-
+    config.paths['db/migrate'] += Feedbacker::Engine.paths['db/migrate'].existent
+    
 7. Run `rake db:migrate` to add remarks table.
 
 8. Create feedbacker.rb in config/initializers and add the following line.
