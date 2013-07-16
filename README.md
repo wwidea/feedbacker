@@ -13,6 +13,7 @@ Feedbacker assumes that you're using...
 *  At least Rails 3.1.3
 *  The Rails Asset Pipeline
 *  Jquery
+*  That you have a User class with email and name methods (name can be configured to something else)
 *  and probably some other things that we've failed to mention.
 
 Installation
@@ -43,14 +44,18 @@ Installation
 
 8. Create feedbacker.rb in config/initializers and add the following line.
 
-    Feedbacker::EMAIL_TO = 'support@yourdomain.com'
+    Feedbacker::SETTINGS.email_to = 'support@yourdomain.com'
+    
+  OR
+  
+    Feedbacker::SETTINGS.update do |settings|
+      settings.email_to = 'support@yourdomain.com'
+      settings.user_name_method = :name             # default value
+      settings.email_prefix = '[FEEDBACKER]'        # default value
+    end
 
-9. (Optional) You may also add either or both of the following lines and edit to taste. Defaults are shown.
 
-    Feedbacker::RemarkMethods::USER_NAME_METHOD = :first_last
-    Feedbacker::EMAIL_PREFIX = '[FEEDBACKER]'
-
-Copyright (c) 2009 WWIDEA, Inc. released under the MIT license
+Copyright (c) 2009-2013 WWIDEA, Inc. released under the MIT license
 
 
 Contributions
