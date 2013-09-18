@@ -1,7 +1,7 @@
 $('#feedback_submit_button').hide();
 $('#feedback_thank_you_message').fadeIn('500')
 setTimeout(function() {
-  Feedback.hide_form();
+  Feedback.toggle_form();
   $('#feedback_thank_you_message').hide();
   $('#feedback_submit_button').show();  
 }, 2000);
