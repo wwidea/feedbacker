@@ -59,7 +59,9 @@ Installation
           settings.email_prefix = '[FEEDBACKER]'        # default value
         end
 
+9. Rails 4.2: Add this line to the top of your routes file.
 
+        resources :remarks, :only => [:create]
 
 Contributions
 -------------
