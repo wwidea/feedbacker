@@ -40,6 +40,10 @@ Installation
 6. Add the folllowing line to config/application.rb.
 
         config.paths['db/migrate'] += Feedbacker::Engine.paths['db/migrate'].existent
+
+   For Rails 4.2:
+    
+        config.paths['db/migrate'].concat(Feedbacker::Engine.paths['db/migrate'].existent)
     
 7. Run `rake db:migrate` to add remarks table.
 
