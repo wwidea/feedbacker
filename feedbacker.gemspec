@@ -10,6 +10,8 @@ Gem::Specification.new do |s|
   s.summary       = %q{Sitewide Feedback form pinned to sidewall as verticle tab.}
   s.description   = %q{Feedbacker provides a pull out tab on the side of every page on a site for users to send feedback to the site.}
   s.license     = 'MIT'
+  
+  s.add_dependency('actionmailer', '~> 4.2')
 
   s.add_development_dependency('rake','>= 0.9.2')
   s.add_development_dependency('rdoc','>= 3.12')
